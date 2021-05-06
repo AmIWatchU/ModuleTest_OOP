@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ModuleTest_OOP
 {
@@ -45,16 +41,19 @@ namespace ModuleTest_OOP
                 }
                 avg[i] = sum / n;
 
-                //foreach (var a in avg[i])
-                //{
-                //    Console.WriteLine(a);
-                //}
+             
+            }
+            Console.WriteLine("Середні значення:"); 
+            foreach (var a in avg)
+            {
+                Console.WriteLine(a);
             }
 
             var indexMin = 0;
             var indexMax = 0;
-            var avgMin = 100d;
-            var avgMax = -100d;
+            var avgMin = 100d; // Початкове мінімальне значення
+            var avgMax = -100d; //Початкове максимальне значення
+
             //Знаходження індексів рядків з максимальним і мінімальним середнім значенням
             for (int i = 0; i < m; i++)
             {
@@ -83,7 +82,7 @@ namespace ModuleTest_OOP
             for (int i = 0; i < arr.GetLength(0); i++, Console.WriteLine())
                 for (int j = 0; j < arr.GetLength(1); j++)
                     Console.Write("{0,3}", arr[i, j]);
-
+            Console.ReadKey();
         }
     }
 }
